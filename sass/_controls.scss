@@ -1,0 +1,73 @@
+@import "mixins-media";
+
+.controls {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.controls__item {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 10%;
+  user-select: none;
+  color:rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  opacity: 0; 
+  transition: opacity 2s;
+  font-size: 45px;
+
+  @include md {
+    font-size: 30px;
+  }
+}
+
+.controls__prev {
+  top: 0;
+  bottom: 0;
+}
+
+.controls__prev:hover {
+  opacity: 1;
+  background: linear-gradient(to right, #dbe1e3 5%, transparent 100%); 
+  color:rgba(255, 255, 255, 0.9);
+}
+
+.controls__next {
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.controls__next:hover {
+  opacity: 1;
+  background: linear-gradient(to left, #dbe1e3 5%, transparent 100%); 
+  color:rgba(255, 255, 255, 0.9);
+}
+
+.controls__pause {
+  top: calc(50% - 75px);
+  right: calc(50% - 75px);
+  height: 150px;
+  width: 150px;
+  @include md {
+    top: calc(50% - 50px);
+    right: calc(50% - 50px);
+    height: 100px;
+    width: 100px;
+  }
+  box-shadow: 0 0 10px 10px #fff;
+  border-radius: 35%;
+  background-color:rgba(24, 21, 21, 0.6);
+}
+
+.controls__pause:hover {
+  opacity: 1;
+  color:rgba(255, 255, 255, 0.9);
+}
