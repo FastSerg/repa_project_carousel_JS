@@ -31,11 +31,7 @@
 .controls__prev {
   top: 0;
   bottom: 0;
-}
-
-.controls__prev:hover {
-  opacity: 1;
-  background: linear-gradient(to right, #dbe1e3 5%, transparent 100%); 
+  background: linear-gradient(to right, #030b0e 5%, transparent 100%); 
   color:rgba(255, 255, 255, 0.9);
 }
 
@@ -43,11 +39,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-}
-
-.controls__next:hover {
-  opacity: 1;
-  background: linear-gradient(to left, #dbe1e3 5%, transparent 100%); 
+  background: linear-gradient(to left, #030b0e 5%, transparent 100%); 
   color:rgba(255, 255, 255, 0.9);
 }
 
@@ -65,9 +57,20 @@
   box-shadow: 0 0 10px 10px #fff;
   border-radius: 35%;
   background-color:rgba(24, 21, 21, 0.6);
+  > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    @include md {
+      font-size: 2.5rem;
+    }
+  }
 }
 
 .controls__pause:hover {
   opacity: 1;
   color:rgba(255, 255, 255, 0.9);
 }
+
