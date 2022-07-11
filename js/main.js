@@ -1,6 +1,6 @@
-import Carousel from './carousel.js';
+import SwipeCarousel from './swipe-carosel.js';
 
-const carousel = new Carousel({
+const carousel = new SwipeCarousel({
   container:'.carousel', 
   slider:'.slide__item', 
   isPlaing: false
